@@ -1,0 +1,1610 @@
+G4BL_DIR=/Applications/G4beamline-3.08.app/Contents
+LD_LIBRARY_PATH='/Applications/G4beamline-3.08.app/Contents/lib:'
+G4ABLADATA=/Users/prebys/Geant4Data/G4ABLA3.1
+G4LEDATA=/Users/prebys/Geant4Data/G4EMLOW8.0
+G4ENSDFSTATEDATA=/Users/prebys/Geant4Data/G4ENSDFSTATE2.3
+G4INCLDATA=/Users/prebys/Geant4Data/G4INCL1.0
+G4NEUTRONHPDATA=/Users/prebys/Geant4Data/G4NDL4.6
+G4PARTICLEXSDATA=/Users/prebys/Geant4Data/G4PARTICLEXS4.0
+G4PIIDATA=/Users/prebys/Geant4Data/G4PII1.3
+G4LEVELGAMMADATA=/Users/prebys/Geant4Data/PhotonEvaporation5.7
+G4RADIOACTIVEDATA=/Users/prebys/Geant4Data/RadioactiveDecay5.6
+G4REALSURFACEDATA=/Users/prebys/Geant4Data/RealSurface2.2
+G4SAIDXSDATA=/Users/prebys/Geant4Data/G4SAIDDATA2.0
+G4TENDLDATA=/Users/prebys/Geant4Data/G4TENDL1.4
+G4LENDDATA=/Users/prebys/Geant4Data/LEND_GND1.3_ENDF.BVII.1
+G4beamline Process ID 50955
+
+*************************************************************
+ g4beamline version: 3.08                        (Oct  8 2022)
+                      Copyright : Tom Roberts, Muons, Inc.
+                        License : Gnu Public License
+                            WWW : http://g4beamline.muonsinc.com
+
+          ################################
+          !!! G4Backtrace is activated !!!
+          ################################
+
+
+**************************************************************
+ Geant4 version Name: geant4-11-00-patch-02 [MT]   (25-May-2022)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+param        beamFIle      exttracks_rot_1800000.root
+param        viewer        best,1
+geometry                   nPoints=100 printGeometry=0 visual=0
+                           tolerance=0.002
+param        grid          0
+param        deltaTheta    0.0
+param        downstream    0
+param        kw            W
+param        verbose       0
+param        grid          0  (already defined)
+param        Num_Events    7000
+param        First_Event   1
+param        deltaTheta    0.0  (already defined)
+param        gapC_TAIL     6.0
+param        gapC_US       4.758150345
+param        gapC_DS       3.979110093
+param        verbose       0  (already defined)
+param        full          1
+param        upstream      0
+param        downstream    0  (already defined)
+param        beamDirectory VirtualDetector
+param        beamNtuple    tracklist
+param        reference     0
+param        coljaw        W
+param        eventTimeLimit 1.
+param        use_FCOL      0.
+param        HOME          .
+param        upstream      1
+param        downstream    1
+param        beamFile      ./exttracks_rot_e30_e40_1800000.root
+param        maxStep       100.
+G4PhysListFactory::GetReferencePhysList <QGSP_BERT>  EMoption= 0
+<<< Geant4 Physics List simulation engine: QGSP_BERT
+
+
+physics      QGSP_BERT     disable= inactivate= deactivate= doStochastics=1
+                           fluct=1 minRangeCut=1 list=0 gammaToMuPair=0
+                           spinTracking=0 synchrotronRadiation=0
+                           synchrotronRadiationMuon=0 maxTime=1e+06
+trackcuts                  kill= keep= killSecondaries=0 kineticEnergyCut=5000
+                           kineticEnergyMax=1.798e+308 maxTime=1e+06
+                           keepPrimaries=0 steppingVerbose=0
+particlecolor              reference=1,1,1
+randomseed                 print=0
+param        histoFile     mu2e-1-1-W-0.0-7000.root
+param        beamDirectory VirtualDetector  (already defined)
+param        beamNtuple    tracklist  (already defined)
+beam    ROOT   nEvents=7000 firstEvent=-1 lastEvent=2147483647 beamZ=-3700000000000000000000.0 maxR=1000000.0 renumber=0 weight=1.000000 
+		filename=./exttracks_rot_e30_e40_1800000.root directory=VirtualDetector name=tracklist 
+		
+param        theta0        0.000145296567
+param        BRho          29.65014298
+param        ACLength      6.246
+param        ACBField      -0
+param        By_AC929A     0
+param        By_AC929B     0
+param        By_AC929C     0
+param        By_AC929D     0
+param        By_AC929E     0
+param        By_AC929F     0
+genericbend  ACCELL        fieldWidth=90 fieldHeight=18 fieldLength=1000
+                           ironWidth=320 ironHeight=165 ironLength=1041 By=0
+                           maxStep=5 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=0,0,1 kill=0 fringe=
+                           fringeFactor=1 openAperture=0
+param        fieldLengthCR 1219.2
+param        ironLengthCR  1519
+genericbend  C-MAG         fieldWidth=101.2 fieldHeight=101.2 fieldLength=2000
+                           ironWidth=675.2 ironHeight=630.9 ironLength=2000
+                           By=0 maxStep=5 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=0,0,1 kill=0 fringe=0
+                           fringeFactor=1 openAperture=0
+genericbend  6-4-120       fieldWidth=101.2 fieldHeight=101.2 fieldLength=3048
+                           ironWidth=675.2 ironHeight=630.9 ironLength=3048
+                           By=0 maxStep=5 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=1,0,1 kill=0 fringe=0
+                           fringeFactor=1 openAperture=0
+genericbend  6-3-120       fieldWidth=101.2 fieldHeight=101.2 fieldLength=3048
+                           ironWidth=675.2 ironHeight=630.9 ironLength=3048
+                           By=0 maxStep=5 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=0,0,1 kill=0 fringe=0
+                           fringeFactor=1 openAperture=0
+genericbend  EDWA          fieldWidth=179.4 fieldHeight=60.71 fieldLength=3048
+                           ironWidth=508.5 ironHeight=431.8 ironLength=3048
+                           By=0 maxStep=1 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=0,0,1 kill=0 fringe=0
+                           fringeFactor=1 openAperture=0
+genericbend  MDC           fieldWidth=138.2 fieldHeight=57.71 fieldLength=1524
+                           ironWidth=641.4 ironHeight=361.9 ironLength=1524
+                           By=0 maxStep=1 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=0,0,1 kill=0 fringe=0
+                           fringeFactor=1 openAperture=0
+genericbend  CR            fieldWidth=82.55 fieldHeight=82.55 fieldLength=1219
+                           ironWidth=539 ironHeight=245 ironLength=1519 By=0
+                           maxStep=5 fieldMaterial=Vacuum fieldColor=
+                           ironMaterial=Fe ironColor=1,1,1 kill=0 fringe=
+                           fringeFactor=1 openAperture=1
+genericquad  SQA           fieldLength=457.2 ironLength=457.2 ironRadius=285.8
+                           apertureRadius=0 poleTipRadius=44.5
+                           coilRadius=104.2 coilHalfwidth=10.09
+                           coilHalfWidth=10.09 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  SQB           fieldLength=640.1 ironLength=640.1 ironRadius=285.8
+                           apertureRadius=0 poleTipRadius=44.5
+                           coilRadius=104.2 coilHalfwidth=10.09
+                           coilHalfWidth=10.09 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  SQC           fieldLength=701 ironLength=701 ironRadius=285.8
+                           apertureRadius=0 poleTipRadius=44.5
+                           coilRadius=104.2 coilHalfwidth=10.09
+                           coilHalfWidth=10.09 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  SQD           fieldLength=828 ironLength=828 ironRadius=285.8
+                           apertureRadius=0 poleTipRadius=44.5
+                           coilRadius=104.2 coilHalfwidth=10.09
+                           coilHalfWidth=10.09 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  SQE           fieldLength=1312 ironLength=1312 ironRadius=285.8
+                           apertureRadius=0 poleTipRadius=44.5
+                           coilRadius=104.2 coilHalfwidth=10.09
+                           coilHalfWidth=10.09 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  LQC           fieldLength=772.2 ironLength=772.2 ironRadius=629.8
+                           apertureRadius=0 poleTipRadius=85.72
+                           coilRadius=181.9 coilHalfwidth=20.99
+                           coilHalfWidth=20.99 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  LQSQA         fieldLength=457.2 ironLength=457.2 ironRadius=629.8
+                           apertureRadius=0 poleTipRadius=85.72
+                           coilRadius=181.9 coilHalfwidth=20.99
+                           coilHalfWidth=20.99 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  LQSQB         fieldLength=640.1 ironLength=640.1 ironRadius=629.8
+                           apertureRadius=0 poleTipRadius=85.72
+                           coilRadius=181.9 coilHalfwidth=20.99
+                           coilHalfWidth=20.99 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+genericquad  LQD           fieldLength=870 ironLength=870 ironRadius=629.8
+                           apertureRadius=0 poleTipRadius=85.72
+                           coilRadius=181.9 coilHalfwidth=20.99
+                           coilHalfWidth=20.99 gradient=0 maxStep=100
+                           ironMaterial=Fe fieldMaterial=Vacuum
+                           ironColor=1,0,0 kill=0 fringe=0 fringeFactor=1
+                           openAperture=1
+param        beamPipeRadius 44.45
+param        fatBeamPipeRadius 72.9
+param        beamPipeThickness 1.5
+tubs         BEAMPIPE      innerRadius=42.95 outerRadius=44.45 initialPhi=0
+                           finalPhi=360 length=1000 maxStep=100
+                           material=STAINLESS-STEEL color=1,1,1 kill=0
+                           radius=44.45
+tubs         FATBEAMPIPE   innerRadius=71.4 outerRadius=72.9 initialPhi=0
+                           finalPhi=360 length=1000 maxStep=100
+                           material=STAINLESS-STEEL color=1,1,1 kill=0
+                           radius=72.9
+param        lJaw          1000.
+param        hJaw          100.
+param        wJaw          50.
+box          colJaw        height=100 width=50 length=1000 maxStep=100
+                           material=W color=1,1,1 kill=0
+group        TAILCOLLIMATOR length=0 width=0 height=0 radius=-1
+                           material=Vacuum color= maxStep=100
+param        xPos          31
+**************************************************************************
+*** G4Exception: No rename
+***    severity: Warning
+***   issued by: place command
+*** description: Multiple placements of the enclosing group will create multiple objects with identical names.
+**************************************************************************
+  place colJaw  copies=1 x=31.0 y=0.0 z=500.0 rename='rightJawTAIL'
+                material=STAINLESS-STEEL
+**************************************************************************
+*** G4Exception: No rename
+***    severity: Warning
+***   issued by: place command
+*** description: Multiple placements of the enclosing group will create multiple objects with identical names.
+**************************************************************************
+  place colJaw  copies=1 x=-31.0 y=0.0 z=500.0 rename='leftJawTAIL'
+                material=STAINLESS-STEEL
+endgroup TAILCOLLIMATOR length=1000.0 width=112.0 height=100.0
+group        USCOLLIMATOR  length=0 width=0 height=0 radius=-1 material=Vacuum
+                           color= maxStep=100
+param        xPos          29.75815
+**************************************************************************
+*** G4Exception: No rename
+***    severity: Warning
+***   issued by: place command
+*** description: Multiple placements of the enclosing group will create multiple objects with identical names.
+**************************************************************************
+  place colJaw  copies=1 x=29.8 y=0.0 z=500.0 rename='rightJawUS'
+                material=STAINLESS-STEEL
+**************************************************************************
+*** G4Exception: No rename
+***    severity: Warning
+***   issued by: place command
+*** description: Multiple placements of the enclosing group will create multiple objects with identical names.
+**************************************************************************
+  place colJaw  copies=1 x=-29.8 y=0.0 z=500.0 rename='leftJawUS'
+                material=STAINLESS-STEEL
+endgroup USCOLLIMATOR length=1000.0 width=109.5 height=100.0
+group        DSCOLLIMATOR  length=0 width=0 height=0 radius=-1 material=Vacuum
+                           color= maxStep=100
+param        xPos          28.97911
+**************************************************************************
+*** G4Exception: No rename
+***    severity: Warning
+***   issued by: place command
+*** description: Multiple placements of the enclosing group will create multiple objects with identical names.
+**************************************************************************
+  place colJaw  copies=1 x=29.0 y=0.0 z=500.0 rename='rightJawDS'
+**************************************************************************
+*** G4Exception: No rename
+***    severity: Warning
+***   issued by: place command
+*** description: Multiple placements of the enclosing group will create multiple objects with identical names.
+**************************************************************************
+  place colJaw  copies=1 x=-29.0 y=0.0 z=500.0 rename='leftJawDS'
+endgroup DSCOLLIMATOR length=1000.0 width=108.0 height=100.0
+param        zFCOL         195000.
+tubs         F_COL         innerRadius=42.95 outerRadius=44.45 initialPhi=0
+                           finalPhi=360 length=1000 maxStep=100
+                           material=STAINLESS-STEEL color=1,1,1 kill=0
+                           radius=44.45
+tubs         P_COL         innerRadius=42.95 outerRadius=44.45 initialPhi=0
+                           finalPhi=360 length=1000 maxStep=100
+                           material=STAINLESS-STEEL color=1,1,1 kill=0
+                           radius=44.45
+particlefilter EOL         radius=100 innerRadius=0 height=200 width=200
+                           length=1 maxStep=100 material= color=1,1,1 decay=
+                           kill=proton keep= nWait=1 referenceWait=1 require=
+                           steppingVerbose=0 decays=
+param        zTAILCOLLIMATOR 31000.
+param        zACDIPOLE     134003.855
+param        zFocus        245000.
+param        Start_mu2e_upstream_g4bl 4159.879930
+param        Start_Q901    4159.879930
+param        End_Q901      4617.079930
+param        ironLength_SQA 457.200000
+place   SQA     copies=1 x=0.0 y=0.0 z=4388.5 rename='Q901'
+                fieldLength=457.200000 gradient=-14.339446
+                ironLength=457.200000
+param        Start_V901    5154.571920
+param        End_V901      8204.205990
+param        ironLength_EDWA 3049.634070
+param        By_V901       1.102041
+place   EDWA    copies=1 x=21.6 y=0.0 z=6680.6 rename='V901'rotation='Y-3.248957'
+                By=1.102041 fieldLength=3049.634070 ironLength=3049.634070
+param        startBP       4159.879930
+param        endBP         5154.571920
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=4657.2 
+                length=5154.571920-4159.879930
+cornerarc                  z=5155 centerRadius=2.69e+04 angle=-6.498
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q902    9653.631990
+param        End_Q902      10481.671990
+param        ironLength_SQD 828.040000
+place   SQD     copies=1 x=0.0 y=0.0 z=10067.7 rename='Q902'
+                fieldLength=828.040000 gradient=8.159155 ironLength=828.040000
+param        Start_Q903    11853.385990
+param        End_Q903      12267.405990
+place   SQD     copies=1 x=0.0 y=0.0 z=12267.4 rename='Q903'
+                fieldLength=414.020000 gradient=-7.905082
+                ironLength=828.040000
+param        Start_Q903    12267.405990
+param        End_Q903      12681.425990
+place   SQD     copies=1 x=0.0 y=0.0 z=12681.4 rename='Q903'
+                fieldLength=414.020000 gradient=-7.905082
+                ironLength=828.040000
+param        Start_Q904    13802.938990
+param        End_Q904      14216.958990
+place   SQD     copies=1 x=0.0 y=0.0 z=14217.0 rename='Q904'
+                fieldLength=414.020000 gradient=7.664247 ironLength=828.040000
+param        Start_Q904    14216.958990
+param        End_Q904      14630.978990
+place   SQD     copies=1 x=0.0 y=0.0 z=14631.0 rename='Q904'
+                fieldLength=414.020000 gradient=7.664247 ironLength=828.040000
+param        Start_Q905    18068.166990
+param        End_Q905      18525.366990
+place   SQA     copies=1 x=0.0 y=0.0 z=18296.8 rename='Q905'
+                fieldLength=457.200000 gradient=-14.250854
+                ironLength=457.200000
+param        Start_Q906    20434.654990
+param        End_Q906      21135.694990
+param        ironLength_SQC 701.040000
+place   SQC     copies=1 x=0.0 y=0.0 z=20785.2 rename='Q906'
+                fieldLength=701.040000 gradient=-0.489977
+                ironLength=701.040000
+param        Start_V906    21727.378990
+param        End_V906      23251.676810
+param        ironLength_MDC 1524.297820
+param        By_V906       -1.331777
+place   MDC     copies=1 x=-6.5 y=0.0 z=22489.8 rename='V906'rotation='Y1.961788'
+                By=-1.331777 fieldLength=1524.297820 ironLength=1524.297820
+param        startBP       8204.205990
+param        endBP         21727.378990
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=14965.8 
+                length=21727.378990-8204.205990
+cornerarc                  z=2.173e+04 centerRadius=2.226e+04 angle=3.924
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q907    26156.167800
+param        End_Q907      26984.207800
+place   SQD     copies=1 x=0.0 y=0.0 z=26570.2 rename='Q907'
+                fieldLength=828.040000 gradient=5.054877 ironLength=828.040000
+param        Start_V907    27853.919440
+param        End_V907      29378.215960
+param        By_V907       1.328881
+place   MDC     copies=1 x=6.5 y=0.0 z=28616.3 rename='V907'rotation='Y-1.957519'
+                By=1.328881 fieldLength=1524.296520 ironLength=1524.297820
+param        startBP       23251.676810
+param        endBP         27853.919440
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=25552.8 
+                length=27853.919440-23251.676810
+cornerarc                  z=2.785e+04 centerRadius=2.231e+04 angle=-3.915
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q908    35023.568800
+param        End_Q908      35480.768800
+place   SQA     copies=1 x=0.0 y=0.0 z=35252.2 rename='Q908'
+                fieldLength=457.200000 gradient=-11.522801
+                ironLength=457.200000
+param        Start_Q909    37452.719800
+param        End_Q909      37909.919800
+place   SQA     copies=1 x=0.0 y=0.0 z=37681.3 rename='Q909'
+                fieldLength=457.200000 gradient=-1.955026
+                ironLength=457.200000
+param        Start_Q910    41020.637800
+param        End_Q910      41721.677800
+place   SQC     copies=1 x=0.0 y=0.0 z=41371.2 rename='Q910'
+                fieldLength=701.040000 gradient=8.166665 ironLength=701.040000
+param        Start_H910    42959.197660
+param        End_H910      46008.725890
+param        ironLength_6_4_120 3049.528230
+param        By_H910       -1.06584
+place   6-4-120 copies=1 x=-20.9 y=0.0 z=44485.1 rename='H910'rotation='Y3.142015'
+                By=-1.06584 fieldLength=3049.528230 ironLength=3049.528230
+param        startBP       29378.215960
+param        endBP         31000.
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=30189.1 
+                length=31000.-29378.215960
+place   TAILCOLLIMATOR copies=1 x=0.0 y=0.0 z=31500.0 
+param        startBP       32000
+param        endBP         42959.197660
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=37479.6 
+                length=42959.197660-32000
+cornerarc                  z=4.296e+04 centerRadius=2.782e+04 angle=6.284
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q911    46408.725890
+param        End_Q911      46759.245890
+place   SQC     copies=1 x=0.0 y=0.0 z=46759.2 rename='Q911'
+                fieldLength=350.520000 gradient=-6.963356
+                ironLength=701.040000
+param        Start_Q911    46759.245890
+param        End_Q911      47109.765890
+place   SQC     copies=1 x=0.0 y=0.0 z=47109.8 rename='Q911'
+                fieldLength=350.520000 gradient=-6.963356
+                ironLength=701.040000
+param        Start_H911    47852.767610
+param        End_H911      50902.295840
+param        By_H911       -1.06584
+place   6-4-120 copies=1 x=-20.9 y=0.0 z=49378.7 rename='H911'rotation='Y3.142015'
+                By=-1.06584 fieldLength=3049.528230 ironLength=3049.528230
+param        startBP       46008.725890
+param        endBP         47852.767610
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=46930.7 
+                length=47852.767610-46008.725890
+cornerarc                  z=4.785e+04 centerRadius=2.782e+04 angle=6.284
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q912    51473.796710
+param        End_Q912      51930.996710
+place   SQA     copies=1 x=0.0 y=0.0 z=51702.4 rename='Q912'
+                fieldLength=457.200000 gradient=6.721873 ironLength=457.200000
+param        Start_H912    52502.491650
+param        End_H912      55552.849240
+param        ironLength_6_3_120 3050.357590
+param        By_H912       -1.322984
+place   6-3-120 copies=1 x=-25.9 y=0.0 z=54029.4 rename='H912'rotation='Y3.902178'
+                By=-1.322984 fieldLength=3050.357590 ironLength=3050.357590
+param        startBP       50902.295840
+param        endBP         52502.491650
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=51702.4 
+                length=52502.491650-50902.295840
+cornerarc                  z=5.25e+04 centerRadius=2.241e+04 angle=7.804
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q913    56124.344180
+param        End_Q913      56952.384180
+place   SQD     copies=1 x=0.0 y=0.0 z=56538.4 rename='Q913'
+                fieldLength=828.040000 gradient=13.223360
+                ironLength=828.040000
+param        Start_Q914    57418.094180
+param        End_Q914      58246.134180
+place   SQD     copies=1 x=0.0 y=0.0 z=57832.1 rename='Q914'
+                fieldLength=828.040000 gradient=-11.481303
+                ironLength=828.040000
+param        Start_Q915    60661.540180
+param        End_Q915      61489.580180
+place   SQD     copies=1 x=0.0 y=0.0 z=61075.6 rename='Q915'
+                fieldLength=828.040000 gradient=-11.481303
+                ironLength=828.040000
+param        Start_Q916    61955.289980
+param        End_Q916      62783.329980
+place   SQD     copies=1 x=0.0 y=0.0 z=62369.3 rename='Q916'
+                fieldLength=828.040000 gradient=13.223360
+                ironLength=828.040000
+param        Start_H916    63354.824910
+param        End_H916      66405.182500
+param        By_H916       -1.322984
+place   6-3-120 copies=1 x=-25.9 y=0.0 z=64881.8 rename='H916'rotation='Y3.902178'
+                By=-1.322984 fieldLength=3050.357590 ironLength=3050.357590
+param        startBP       55552.849240
+param        endBP         63354.824910
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=59453.8 
+                length=63354.824910-55552.849240
+cornerarc                  z=6.335e+04 centerRadius=2.241e+04 angle=7.804
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q917    66976.677440
+param        End_Q917      67433.877440
+place   SQA     copies=1 x=0.0 y=0.0 z=67205.3 rename='Q917'
+                fieldLength=457.200000 gradient=6.721873 ironLength=457.200000
+param        Start_H917    68005.378300
+param        End_H917      71054.906530
+param        By_H917       -1.06584
+place   6-4-120 copies=1 x=-20.9 y=0.0 z=69531.3 rename='H917'rotation='Y3.142015'
+                By=-1.06584 fieldLength=3049.528230 ironLength=3049.528230
+param        startBP       66405.182500
+param        endBP         68005.378300
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=67205.3 
+                length=68005.378300-66405.182500
+cornerarc                  z=6.801e+04 centerRadius=2.782e+04 angle=6.284
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q918    71797.908260
+param        End_Q918      72498.948260
+place   SQC     copies=1 x=0.0 y=0.0 z=72148.4 rename='Q918'
+                fieldLength=701.040000 gradient=-6.963356
+                ironLength=701.040000
+param        Start_H918    72898.948260
+param        End_H918      75948.476490
+param        By_H918       -1.06584
+place   6-4-120 copies=1 x=-20.9 y=0.0 z=74424.9 rename='H918'rotation='Y3.142015'
+                By=-1.06584 fieldLength=3049.528230 ironLength=3049.528230
+param        startBP       71054.906530
+param        endBP         72898.948260
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=71976.9 
+                length=72898.948260-71054.906530
+cornerarc                  z=7.29e+04 centerRadius=2.782e+04 angle=6.284
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q919    77535.807360
+param        End_Q919      77764.407360
+place   SQA     copies=1 x=0.0 y=0.0 z=77764.4 rename='Q919'
+                fieldLength=228.600000 gradient=9.516940 ironLength=457.200000
+param        Start_Q919    77764.407360
+param        End_Q919      77993.007360
+place   SQA     copies=1 x=0.0 y=0.0 z=77993.0 rename='Q919'
+                fieldLength=228.600000 gradient=9.516940 ironLength=457.200000
+param        Start_Q920    82590.676360
+param        End_Q920      83047.876360
+place   SQA     copies=1 x=0.0 y=0.0 z=82819.3 rename='Q920'
+                fieldLength=457.200000 gradient=-9.516940
+                ironLength=457.200000
+param        Start_Q921    87845.200360
+param        End_Q921      88073.800360
+place   SQA     copies=1 x=0.0 y=0.0 z=88073.8 rename='Q921'
+                fieldLength=228.600000 gradient=9.516940 ironLength=457.200000
+param        Start_Q921    88073.800360
+param        End_Q921      88302.400360
+place   SQA     copies=1 x=0.0 y=0.0 z=88302.4 rename='Q921'
+                fieldLength=228.600000 gradient=9.516940 ironLength=457.200000
+param        Start_Q922    93176.280360
+param        End_Q922      93404.880360
+place   SQA     copies=1 x=0.0 y=0.0 z=93404.9 rename='Q922'
+                fieldLength=228.600000 gradient=-9.516940
+                ironLength=457.200000
+param        Start_Q922    93404.880360
+param        End_Q922      93633.480360
+place   SQA     copies=1 x=0.0 y=0.0 z=93633.5 rename='Q922'
+                fieldLength=228.600000 gradient=-9.516940
+                ironLength=457.200000
+param        Start_Q923    98502.495360
+param        End_Q923      98959.695360
+place   SQA     copies=1 x=0.0 y=0.0 z=98731.1 rename='Q923'
+                fieldLength=457.200000 gradient=9.516940 ironLength=457.200000
+param        Start_Q924    104886.275360
+param        End_Q924      105343.475360
+place   SQA     copies=1 x=0.0 y=0.0 z=105114.9 rename='Q924'
+                fieldLength=457.200000 gradient=-4.415661
+                ironLength=457.200000
+param        Start_COL924A 105610.075780
+param        End_COL924A   106143.475780
+place   USCOLLIMATOR copies=1 x=0.0 y=0.0 z=106110.1 rename='COL924A'
+param        Start_Q925    110212.490360
+param        End_Q925      110669.690360
+place   SQA     copies=1 x=0.0 y=0.0 z=110441.1 rename='Q925'
+                fieldLength=457.200000 gradient=2.041174 ironLength=457.200000
+param        Start_Q926    113173.750360
+param        End_Q926      113630.950360
+place   SQA     copies=1 x=0.0 y=0.0 z=113402.4 rename='Q926'
+                fieldLength=457.200000 gradient=0.380340 ironLength=457.200000
+param        Start_Q927    117698.658360
+param        End_Q927      118155.858360
+place   SQA     copies=1 x=0.0 y=0.0 z=117927.3 rename='Q927'
+                fieldLength=457.200000 gradient=1.689864 ironLength=457.200000
+param        Start_Q928    126453.795360
+param        End_Q928      126773.835360
+param        ironLength_SQB 320.040000
+place   SQB     copies=1 x=0.0 y=0.0 z=126613.8 rename='Q928'
+                fieldLength=320.040000 gradient=-6.815106
+                ironLength=320.040000
+param        Start_Q928    126773.835360
+param        End_Q928      127093.875360
+place   SQB     copies=1 x=0.0 y=0.0 z=126933.9 rename='Q928'
+                fieldLength=320.040000 gradient=-6.815106
+                ironLength=320.040000
+param        Start_Q929    132595.264360
+param        End_Q929      133052.464360
+place   SQA     copies=1 x=0.0 y=0.0 z=132823.9 rename='Q929'
+                fieldLength=457.200000 gradient=5.700134 ironLength=457.200000
+param        End_mu2e_upstream_g4bl 133052.464360
+param        startBP       75948.476490
+param        endBP         105610.075780
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=90779.3 
+                length=105610.075780-75948.476490
+param        startBP       106610.08
+param        endBP         133052.464360
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=119831.3 
+                length=133052.464360-106610.08
+param        startBP       133052.464360
+param        endBP         134003.855
+place   FATBEAMPIPE copies=1 x=0.0 y=0.0 z=133528.2 
+                length=134003.855-133052.464360
+param        Start_mu2e_downstream_g4bl 133930.294360
+param        Start_AC929A  133930.294360
+param        End_AC929A    134971.694360
+param        ironLength_ACCELL 1041.400000
+param        By_AC929A     0  (already defined)
+place   ACCELL  copies=1 x=0.0 y=0.0 z=134451.0 rename='AC929A'rotation='Y-0.000000'
+                By=0 fieldLength=1041.400000 ironLength=1041.400000
+param        Start_AC929B  134971.694360
+param        End_AC929B    136013.094360
+param        By_AC929B     0  (already defined)
+place   ACCELL  copies=1 x=0.0 y=0.0 z=135492.4 rename='AC929B'rotation='Y-0.000000'
+                By=0 fieldLength=1041.400000 ironLength=1041.400000
+param        Start_AC929C  136013.094360
+param        End_AC929C    137054.494360
+param        By_AC929C     0  (already defined)
+place   ACCELL  copies=1 x=0.0 y=0.0 z=136533.8 rename='AC929C'rotation='Y-0.000000'
+                By=0 fieldLength=1041.400000 ironLength=1041.400000
+param        Start_AC929D  137054.494360
+param        End_AC929D    138095.894360
+param        By_AC929D     0  (already defined)
+place   ACCELL  copies=1 x=0.0 y=0.0 z=137575.2 rename='AC929D'rotation='Y-0.000000'
+                By=0 fieldLength=1041.400000 ironLength=1041.400000
+param        Start_AC929E  138095.894360
+param        End_AC929E    139137.294360
+param        By_AC929E     0  (already defined)
+place   ACCELL  copies=1 x=0.0 y=0.0 z=138616.6 rename='AC929E'rotation='Y-0.000000'
+                By=0 fieldLength=1041.400000 ironLength=1041.400000
+param        Start_AC929F  139137.294360
+param        End_AC929F    140178.694360
+param        By_AC929F     0  (already defined)
+place   ACCELL  copies=1 x=0.0 y=0.0 z=139658.0 rename='AC929F'rotation='Y-0.000000'
+                By=0 fieldLength=1041.400000 ironLength=1041.400000
+param        Start_Q930    141056.524360
+param        End_Q930      141513.724360
+param        ironLength_SQA 457.200000  (already defined)
+place   SQA     copies=1 x=0.0 y=0.0 z=141285.1 rename='Q930'
+                fieldLength=457.200000 gradient=6.445932 ironLength=457.200000
+param        Start_Q931    146032.190360
+param        End_Q931      146489.390360
+place   SQA     copies=1 x=0.0 y=0.0 z=146260.8 rename='Q931'
+                fieldLength=457.200000 gradient=-7.840369
+                ironLength=457.200000
+param        Start_COL931A 159673.390360
+param        End_COL931A   160206.790360
+place   DSCOLLIMATOR copies=1 x=0.0 y=0.0 z=160173.4 rename='COL931A'
+param        Start_Q932    162208.820360
+param        End_Q932      162666.020360
+place   SQA     copies=1 x=0.0 y=0.0 z=162437.4 rename='Q932'
+                fieldLength=457.200000 gradient=-4.720597
+                ironLength=457.200000
+param        Start_Q933    169366.115360
+param        End_Q933      170006.195360
+param        ironLength_SQB 320.040000  (already defined)
+place   SQB     copies=1 x=0.0 y=0.0 z=169526.1 rename='Q933'
+                fieldLength=640.080000 gradient=9.653083 ironLength=320.040000
+param        Start_Q934    183256.962360
+param        End_Q934      183897.042360
+place   SQB     copies=1 x=0.0 y=0.0 z=183417.0 rename='Q934'
+                fieldLength=640.080000 gradient=-11.664438
+                ironLength=320.040000
+param        Start_Q935    185615.338360
+param        End_Q935      186271.188360
+param        ironLength_SQE 655.850000
+place   SQE     copies=1 x=0.0 y=0.0 z=185943.3 rename='Q935'
+                fieldLength=655.850000 gradient=10.382270
+                ironLength=655.850000
+param        Start_Q935    186271.188360
+param        End_Q935      186927.038360
+place   SQE     copies=1 x=0.0 y=0.0 z=186599.1 rename='Q935'
+                fieldLength=655.850000 gradient=10.382270
+                ironLength=655.850000
+param        Start_Q936    187724.108360
+param        End_Q936      188364.188360
+place   SQB     copies=1 x=0.0 y=0.0 z=187884.1 rename='Q936'
+                fieldLength=640.080000 gradient=-9.785491
+                ironLength=320.040000
+param        Start_FCOL    194457.562860
+param        End_FCOL      194957.562860
+place   F_COL   copies=1 x=0.0 y=0.0 z=194957.6 rename='FCOL'
+param        Start_FCOL    195541.762860
+param        End_FCOL      196041.762860
+place   F_COL   copies=1 x=0.0 y=0.0 z=196041.8 rename='FCOL'
+param        Start_V936    203538.491910
+param        End_V936      204757.720150
+param        ironLength_CR 1219.228240
+param        By_V936       0.573365
+place   CR      copies=1 x=1.8 y=0.0 z=204148.1 rename='V936'rotation='Y-0.675448'
+                By=0.573365 fieldLength=1219.228240 ironLength=1219.228240
+param        startBP       140178.694360
+param        endBP         141056.524360
+place   FATBEAMPIPE copies=1 x=0.0 y=0.0 z=140617.6 
+                length=141056.524360-140178.694360
+param        startBP       141056.524360
+param        endBP         159673.390360
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=150365.0 
+                length=159673.390360-141056.524360
+param        startBP       160673.39
+param        endBP         194441.76
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=177557.6 
+                length=194441.76-160673.39
+param        startBP       196041.762860
+param        endBP         203538.491910
+place   BEAMPIPE copies=1 x=0.0 y=0.0 z=199790.1 
+                length=203538.491910-196041.762860
+cornerarc                  z=2.035e+05 centerRadius=5.171e+04 angle=-1.351
+                           rotation=Z0.000 radiusCut=300
+param        Start_Q937    205252.721680
+param        End_Q937      206024.881680
+param        ironLength_LQC 772.160000
+place   LQC     copies=1 x=0.0 y=0.0 z=205638.8 rename='Q937'
+                fieldLength=772.160000 gradient=5.856538 ironLength=772.160000
+param        Start_Q938    208440.361680
+param        End_Q938      208875.361680
+param        ironLength_LQD 435.000000
+place   LQD     copies=1 x=0.0 y=0.0 z=208657.9 rename='Q938'
+                fieldLength=435.000000 gradient=-9.320270
+                ironLength=435.000000
+param        Start_Q938    208875.369180
+param        End_Q938      209310.369180
+place   LQD     copies=1 x=0.0 y=0.0 z=209092.9 rename='Q938'
+                fieldLength=435.000000 gradient=-9.320270
+                ironLength=435.000000
+param        Start_Q939    213318.422680
+param        End_Q939      213704.502680
+place   LQC     copies=1 x=0.0 y=0.0 z=213704.5 rename='Q939'
+                fieldLength=386.080000 gradient=6.039629 ironLength=772.160000
+param        Start_Q939    213704.502680
+param        End_Q939      214090.582680
+place   LQC     copies=1 x=0.0 y=0.0 z=214090.6 rename='Q939'
+                fieldLength=386.080000 gradient=6.039629 ironLength=772.160000
+param        Start_Q940    219784.560680
+param        End_Q940      220241.760680
+place   SQA     copies=1 x=0.0 y=0.0 z=220013.2 rename='Q940'
+                fieldLength=457.200000 gradient=-8.687560
+                ironLength=457.200000
+param        Start_VT940   222618.440680
+param        End_VT940     223837.640680
+param        By_VT940      0.000000
+place   CR      copies=1 x=0.0 y=0.0 z=223228.1 rename='VT940'rotation='Y-0.000000'
+                By=0.000000 fieldLength=1219.200000 ironLength=1219.228240
+param        Start_Q941    225935.738680
+param        End_Q941      226707.898680
+place   LQC     copies=1 x=0.0 y=0.0 z=226321.8 rename='Q941'
+                fieldLength=772.160000 gradient=6.039629 ironLength=772.160000
+param        Start_Q942    230715.959680
+param        End_Q942      231585.959680
+place   LQD     copies=1 x=0.0 y=0.0 z=230933.5 rename='Q942'
+                fieldLength=870.000000 gradient=-9.320270
+                ironLength=435.000000
+param        Start_VT942   232282.239680
+param        End_VT942     233501.439680
+param        By_VT942      0.000000
+place   CR      copies=1 x=0.0 y=0.0 z=232891.9 rename='VT942'rotation='Y-0.000000'
+                By=0.000000 fieldLength=1219.200000 ironLength=1219.228240
+param        Start_Q943    234001.439680
+param        End_Q943      234773.599680
+place   LQC     copies=1 x=0.0 y=0.0 z=234387.5 rename='Q943'
+                fieldLength=772.160000 gradient=5.856538 ironLength=772.160000
+param        Start_V943    235268.601210
+param        End_V943      236487.829450
+param        By_V943       0.573365
+place   CR      copies=1 x=1.8 y=0.0 z=235878.2 rename='V943'rotation='Y-0.675448'
+                By=0.573365 fieldLength=1219.228240 ironLength=1219.228240
+param        startBP       204757.720150
+param        endBP         219784.560680
+place   FATBEAMPIPE copies=1 x=0.0 y=0.0 z=212271.1 
+                length=219784.560680-204757.720150
+param        startBP       220241.760680
+param        endBP         235268.601210
+place   FATBEAMPIPE copies=1 x=0.0 y=0.0 z=227755.2 
+                length=235268.601210-220241.760680
+cornerarc                  z=2.353e+05 centerRadius=5.171e+04 angle=-1.351
+                           rotation=Z0.000 radiusCut=300
+param        Start_PCOL    238678.628940
+param        End_PCOL      239745.428940
+place   P_COL   copies=1 x=0.0 y=0.0 z=239178.6 rename='PCOL'
+param        End_mu2e_downstream_g4bl 239745.428940
+param        startBP       236487.829450
+param        endBP         239745.428940
+place   FATBEAMPIPE copies=1 x=0.0 y=0.0 z=238116.6 
+                length=239745.428940-236487.829450
+param        zStart        0
+param        zEnd          245000.
+param        lPad          5254.5711
+place   FATBEAMPIPE copies=1 x=0.0 y=0.0 z=242372.7 
+                length=5254.5711
+zntuple                    z=2201. zloop= noSingles=0 format= file= filename=
+                           require= referenceParticle=0 coordinates=Centerline
+zntuple                    z=31000.-1 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=31000.+1002 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=105610.075780-1 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=105610.075780+1002 zloop= noSingles=0 format=
+                           file= filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=134003.855 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=3000+134003.855 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=134003.855+6000 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=159673.390360-1 zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=159673.390360+1002. zloop= noSingles=0 format=
+                           file= filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=196041.762860-800 zloop= noSingles=0 format=
+                           file= filename= require= referenceParticle=0
+                           coordinates=Centerline
+zntuple                    z=245000. zloop= noSingles=0 format= file=
+                           filename= require= referenceParticle=0
+                           coordinates=Centerline
+ntuple       DST           category=NTuple detectors=* required=Z245000 veto=
+                           format= filename= minHit=0 perTrack=0 union=0
+                           require=Z245000 minHits=0 file=
+
+World size (before incrementing by 201.357 mm): 1259.6 H  196662.9 W  490000.0 L
+
+PARAMETERS:
+       ACBField=-0
+       ACLength=6.246
+           BRho=29.65014298
+      By_AC929A=0
+      By_AC929B=0
+      By_AC929C=0
+      By_AC929D=0
+      By_AC929E=0
+      By_AC929F=0
+        By_H910=-1.06584
+        By_H911=-1.06584
+        By_H912=-1.322984
+        By_H916=-1.322984
+        By_H917=-1.06584
+        By_H918=-1.06584
+        By_V901=1.102041
+        By_V906=-1.331777
+        By_V907=1.328881
+        By_V936=0.573365
+        By_V943=0.573365
+       By_VT940=0.000000
+       By_VT942=0.000000
+     End_AC929A=134971.694360
+     End_AC929B=136013.094360
+     End_AC929C=137054.494360
+     End_AC929D=138095.894360
+     End_AC929E=139137.294360
+     End_AC929F=140178.694360
+    End_COL924A=106143.475780
+    End_COL931A=160206.790360
+       End_FCOL=196041.762860
+       End_H910=46008.725890
+       End_H911=50902.295840
+       End_H912=55552.849240
+       End_H916=66405.182500
+       End_H917=71054.906530
+       End_H918=75948.476490
+       End_PCOL=239745.428940
+       End_Q901=4617.079930
+       End_Q902=10481.671990
+       End_Q903=12681.425990
+       End_Q904=14630.978990
+       End_Q905=18525.366990
+       End_Q906=21135.694990
+       End_Q907=26984.207800
+       End_Q908=35480.768800
+       End_Q909=37909.919800
+       End_Q910=41721.677800
+       End_Q911=47109.765890
+       End_Q912=51930.996710
+       End_Q913=56952.384180
+       End_Q914=58246.134180
+       End_Q915=61489.580180
+       End_Q916=62783.329980
+       End_Q917=67433.877440
+       End_Q918=72498.948260
+       End_Q919=77993.007360
+       End_Q920=83047.876360
+       End_Q921=88302.400360
+       End_Q922=93633.480360
+       End_Q923=98959.695360
+       End_Q924=105343.475360
+       End_Q925=110669.690360
+       End_Q926=113630.950360
+       End_Q927=118155.858360
+       End_Q928=127093.875360
+       End_Q929=133052.464360
+       End_Q930=141513.724360
+       End_Q931=146489.390360
+       End_Q932=162666.020360
+       End_Q933=170006.195360
+       End_Q934=183897.042360
+       End_Q935=186927.038360
+       End_Q936=188364.188360
+       End_Q937=206024.881680
+       End_Q938=209310.369180
+       End_Q939=214090.582680
+       End_Q940=220241.760680
+       End_Q941=226707.898680
+       End_Q942=231585.959680
+       End_Q943=234773.599680
+       End_V901=8204.205990
+       End_V906=23251.676810
+       End_V907=29378.215960
+       End_V936=204757.720150
+       End_V943=236487.829450
+      End_VT940=223837.640680
+      End_VT942=233501.439680
+End_mu2e_downstream_g4bl=239745.428940
+End_mu2e_upstream_g4bl=133052.464360
+    First_Event=1
+           HOME=.
+     Num_Events=7000
+   Start_AC929A=133930.294360
+   Start_AC929B=134971.694360
+   Start_AC929C=136013.094360
+   Start_AC929D=137054.494360
+   Start_AC929E=138095.894360
+   Start_AC929F=139137.294360
+  Start_COL924A=105610.075780
+  Start_COL931A=159673.390360
+     Start_FCOL=195541.762860
+     Start_H910=42959.197660
+     Start_H911=47852.767610
+     Start_H912=52502.491650
+     Start_H916=63354.824910
+     Start_H917=68005.378300
+     Start_H918=72898.948260
+     Start_PCOL=238678.628940
+     Start_Q901=4159.879930
+     Start_Q902=9653.631990
+     Start_Q903=12267.405990
+     Start_Q904=14216.958990
+     Start_Q905=18068.166990
+     Start_Q906=20434.654990
+     Start_Q907=26156.167800
+     Start_Q908=35023.568800
+     Start_Q909=37452.719800
+     Start_Q910=41020.637800
+     Start_Q911=46759.245890
+     Start_Q912=51473.796710
+     Start_Q913=56124.344180
+     Start_Q914=57418.094180
+     Start_Q915=60661.540180
+     Start_Q916=61955.289980
+     Start_Q917=66976.677440
+     Start_Q918=71797.908260
+     Start_Q919=77764.407360
+     Start_Q920=82590.676360
+     Start_Q921=88073.800360
+     Start_Q922=93404.880360
+     Start_Q923=98502.495360
+     Start_Q924=104886.275360
+     Start_Q925=110212.490360
+     Start_Q926=113173.750360
+     Start_Q927=117698.658360
+     Start_Q928=126773.835360
+     Start_Q929=132595.264360
+     Start_Q930=141056.524360
+     Start_Q931=146032.190360
+     Start_Q932=162208.820360
+     Start_Q933=169366.115360
+     Start_Q934=183256.962360
+     Start_Q935=186271.188360
+     Start_Q936=187724.108360
+     Start_Q937=205252.721680
+     Start_Q938=208875.369180
+     Start_Q939=213704.502680
+     Start_Q940=219784.560680
+     Start_Q941=225935.738680
+     Start_Q942=230715.959680
+     Start_Q943=234001.439680
+     Start_V901=5154.571920
+     Start_V906=21727.378990
+     Start_V907=27853.919440
+     Start_V936=203538.491910
+     Start_V943=235268.601210
+    Start_VT940=222618.440680
+    Start_VT942=232282.239680
+Start_mu2e_downstream_g4bl=133930.294360
+Start_mu2e_upstream_g4bl=4159.879930
+            Zcl=245000
+  beamDirectory=VirtualDetector
+       beamFIle=exttracks_rot_1800000.root
+       beamFile=./exttracks_rot_e30_e40_1800000.root
+     beamNtuple=tracklist
+ beamPipeRadius=44.45
+beamPipeThickness=1.5
+         coljaw=W
+     deltaChord=3.0
+deltaIntersection=0.1
+   deltaOneStep=0.01
+     deltaTheta=0.0
+     downstream=1
+          endBP=239745.428940
+         epsMax=0.05
+         epsMin=2.5e-7
+ eventTimeLimit=1.
+fatBeamPipeRadius=72.9
+  fieldLengthCR=1219.2
+    fieldVoxels=200,200,200
+           full=1
+        gapC_DS=3.979110093
+      gapC_TAIL=6.0
+        gapC_US=4.758150345
+           grid=0
+           hJaw=100.
+      histoFile=mu2e-1-1-W-0.0-7000.root
+    histoUpdate=0
+   ironLengthCR=1519
+ironLength_6_3_120=3050.357590
+ironLength_6_4_120=3049.528230
+ironLength_ACCELL=1041.400000
+  ironLength_CR=1219.228240
+ironLength_EDWA=3049.634070
+ ironLength_LQC=772.160000
+ ironLength_LQD=435.000000
+ ironLength_MDC=1524.297820
+ ironLength_SQA=457.200000
+ ironLength_SQB=320.040000
+ ironLength_SQC=701.040000
+ ironLength_SQD=828.040000
+ ironLength_SQE=655.850000
+             kw=W
+           lJaw=1000.
+           lPad=5254.5711
+        maxStep=100.
+        minStep=0.01
+      reference=0
+        startBP=236487.829450
+ steppingFormat=N GLOBAL CL KE STEP VOL PROCESS
+steppingVerbose=0
+         theta0=0.000145296567
+       upstream=1
+       use_FCOL=0.
+        verbose=0
+         viewer=best,1
+           wJaw=50.
+ wallClockLimit=-1
+  worldMaterial=Vacuum
+           xPos=28.97911
+      zACDIPOLE=134003.855
+           zEnd=245000.
+          zFCOL=195000.
+         zFocus=245000.
+         zStart=0
+zTAILCOLLIMATOR=31000.
+     zTolerance=2.0
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q901:0 (G4SubtractionSolid) with its mother volume Q901 (G4Tubs)
+          protrusion at mother local point (-51.0347,11.8837,228.62) by 20 um  (max of 61 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+Checking overlaps for volume Q901:0 (G4SubtractionSolid) ... Checking overlaps for volume Q901:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q901 parent= relZ=4388.5 globZ=4388.5
+Checking overlaps for volume V901:0 (G4Box) ... OK! 
+Checking overlaps for volume V901:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct V901 parent= relZ=6678.2 globZ=6678.2
+	zmin=5153.3 zmax=8203.0
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with volume already placed !
+          Overlap is detected for volume BEAMPIPE:0 (G4Tubs) with Q901:0 (G4Tubs)
+          overlap at local point (19.5019,38.2672,0.0140213) by 22.8586 cm  (max of 450 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+BLCMDtubs::Construct BEAMPIPE parent= relZ=4657.2 globZ=4657.2
+	zmin=4159.9 zmax=5154.6 kill=0
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q902:0 (G4SubtractionSolid) with its mother volume Q902 (G4Tubs)
+          protrusion at mother local point (-23.8402,-31.0699,414.04) by 20 um  (max of 44 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q902:0 (G4SubtractionSolid) ... Checking overlaps for volume Q902:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q902 parent= relZ=10049.2 globZ=10049.2
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q903:0 (G4SubtractionSolid) with its mother volume Q903 (G4Tubs)
+          protrusion at mother local point (2.92106,-1.5891,-414.04) by 20 um  (max of 31 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+Checking overlaps for volume Q903:0 (G4SubtractionSolid) ... Checking overlaps for volume Q903:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q903 parent= relZ=12234.8 globZ=12234.8
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q903:0 (G4SubtractionSolid) with its mother volume Q903 (G4Tubs)
+          protrusion at mother local point (-104.122,9.06684,-414.04) by 20 um  (max of 45 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with volume already placed !
+          Overlap is detected for volume Q903:0 (G4Tubs) with Q903:0 (G4Tubs)
+          overlap at local point (-4.19732,2.81025,-2.08317e-12) by 28.0699 cm  (max of 126 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+BLCMDgenericquad::Construct Q903 parent= relZ=12646.1 globZ=12646.1
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q904:0 (G4SubtractionSolid) with its mother volume Q904 (G4Tubs)
+          protrusion at mother local point (12.3784,-17.3865,-414.04) by 20 um  (max of 38 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+Checking overlaps for volume Q903:0 (G4SubtractionSolid) ... Checking overlaps for volume Q903:0 (G4Tubs) ... Checking overlaps for volume Q904:0 (G4SubtractionSolid) ... Checking overlaps for volume Q904:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q904 parent= relZ=14171.8 globZ=14171.8
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q904:0 (G4SubtractionSolid) with its mother volume Q904 (G4Tubs)
+          protrusion at mother local point (-10.1885,22.7471,-414.04) by 20 um  (max of 45 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with volume already placed !
+          Overlap is detected for volume Q904:0 (G4Tubs) with Q904:0 (G4Tubs)
+          overlap at local point (0.963636,17.5505,-2.68571e-12) by 26.8173 cm  (max of 122 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+**************************************************************************
+BLCMDgenericquad::Construct Q904 parent= relZ=14583.2 globZ=14583.2
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q905:0 (G4SubtractionSolid) with its mother volume Q905 (G4Tubs)
+          protrusion at mother local point (-62.6507,-7.71535,228.62) by 20 um  (max of 55 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+Checking overlaps for volume Q904:0 (G4SubtractionSolid) ... Checking overlaps for volume Q904:0 (G4Tubs) ... Checking overlaps for volume Q905:0 (G4SubtractionSolid) ... Checking overlaps for volume Q905:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q905 parent= relZ=18225.4 globZ=18225.4
+Checking overlaps for volume Q906:0 (G4SubtractionSolid) ... Checking overlaps for volume Q906:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q906 parent= relZ=20697.8 globZ=20697.8
+Checking overlaps for volume V906:0 (G4Box) ... OK! 
+Checking overlaps for volume V906:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct V906 parent= relZ=22393.2 globZ=22393.2
+	zmin=21631.1 zmax=23155.4
+BLCMDtubs::Construct BEAMPIPE parent= relZ=14915.8 globZ=14915.8
+	zmin=8154.2 zmax=21677.4 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q907:0 (G4SubtractionSolid) ... Checking overlaps for volume Q907:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q907 parent= relZ=26468.4 globZ=26468.4
+Checking overlaps for volume V907:0 (G4Box) ... OK! 
+Checking overlaps for volume V907:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct V907 parent= relZ=28511.1 globZ=28511.1
+	zmin=27748.9 zmax=29273.2
+BLCMDtubs::Construct BEAMPIPE parent= relZ=25452.0 globZ=25452.0
+	zmin=23150.9 zmax=27753.1 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q908:0 (G4SubtractionSolid) ... Checking overlaps for volume Q908:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q908 parent= relZ=35106.4 globZ=35106.4
+Checking overlaps for volume Q909:0 (G4SubtractionSolid) ... Checking overlaps for volume Q909:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q909 parent= relZ=37519.9 globZ=37519.9
+Checking overlaps for volume Q910:0 (G4SubtractionSolid) ... Checking overlaps for volume Q910:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q910 parent= relZ=41186.1 globZ=41186.1
+Checking overlaps for volume H910:0 (G4Box) ... OK! 
+Checking overlaps for volume H910:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct H910 parent= relZ=44284.9 globZ=44284.9
+	zmin=42760.2 zmax=45809.7
+BLCMDtubs::Construct BEAMPIPE parent= relZ=30075.7 globZ=30075.7
+	zmin=29264.8 zmax=30886.6 kill=0
+BLGroup::Construct TAILCOLLIMATOR parent= relZ=31378.2 globZ=0.0 length=1000.0
+	zmin=-500.0 zmax=500.0 width=112.0 Height=100.0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume TAILCOLLIMATOR:0 (G4Box) ... OK! 
+	Parent pos=0.0,0.0,0.0 Relative pos=-2390.5,0.0,31378.2 Global pos=-2390.5,0.0,31378.2
+Checking overlaps for volume rightJawTAIL:0 (G4Box) ... OK! 
+BLCMDbox::Construct rightJawTAIL parent= relZ=0.0 globZ=31381.7
+	zmin=30881.7 zmax=31881.7
+Checking overlaps for volume leftJawTAIL:0 (G4Box) ... OK! 
+BLCMDbox::Construct leftJawTAIL parent= relZ=0.0 globZ=31374.7
+	zmin=30874.7 zmax=31874.7
+BLCMDtubs::Construct BEAMPIPE parent= relZ=37319.5 globZ=37319.5
+	zmin=31839.9 zmax=42799.1 kill=0
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q911:0 (G4SubtractionSolid) with its mother volume Q911 (G4Tubs)
+          protrusion at mother local point (0.419008,98.2559,-350.54) by 20 um  (max of 46 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q911:0 (G4SubtractionSolid) ... Checking overlaps for volume Q911:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q911 parent= relZ=46557.3 globZ=46557.3
+BLCMDgenericquad::Construct Q911 parent= relZ=46907.8 globZ=46907.8
+Checking overlaps for volume Q911:0 (G4SubtractionSolid) ... Checking overlaps for volume Q911:0 (G4Tubs) ... Checking overlaps for volume H911:0 (G4Box) ... OK! 
+Checking overlaps for volume H911:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct H911 parent= relZ=49174.7 globZ=49174.7
+	zmin=47649.9 zmax=50699.4
+BLCMDtubs::Construct BEAMPIPE parent= relZ=46728.8 globZ=46728.8
+	zmin=45806.8 zmax=47650.8 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q912:0 (G4SubtractionSolid) ... Checking overlaps for volume Q912:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q912 parent= relZ=51490.4 globZ=51490.4
+Checking overlaps for volume H912:0 (G4Box) ... OK! 
+Checking overlaps for volume H912:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct H912 parent= relZ=53792.6 globZ=53792.6
+	zmin=52267.5 zmax=55317.8
+BLCMDtubs::Construct BEAMPIPE parent= relZ=51490.4 globZ=51490.4
+	zmin=50690.3 zmax=52290.5 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q913:0 (G4SubtractionSolid) ... Checking overlaps for volume Q913:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q913 parent= relZ=56244.7 globZ=56244.7
+Checking overlaps for volume Q914:0 (G4SubtractionSolid) ... Checking overlaps for volume Q914:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q914 parent= relZ=57500.6 globZ=57500.6
+Checking overlaps for volume Q915:0 (G4SubtractionSolid) ... Checking overlaps for volume Q915:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q915 parent= relZ=60649.3 globZ=60649.3
+Checking overlaps for volume Q916:0 (G4SubtractionSolid) ... Checking overlaps for volume Q916:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q916 parent= relZ=61905.3 globZ=61905.3
+Checking overlaps for volume H916:0 (G4Box) ... OK! 
+Checking overlaps for volume H916:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct H916 parent= relZ=64322.2 globZ=64322.2
+	zmin=62797.0 zmax=65847.4
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with volume already placed !
+          Overlap is detected for volume BEAMPIPE:0 (G4Tubs) with Q913:0 (G4Tubs)
+          overlap at local point (42.9372,-1.0498,-51.0406) by 24.28 cm  (max of 108 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+BLCMDtubs::Construct BEAMPIPE parent= relZ=59075.0 globZ=59075.0
+	zmin=55174.0 zmax=62976.0 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q917:0 (G4SubtractionSolid) ... Checking overlaps for volume Q917:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q917 parent= relZ=66507.8 globZ=66507.8
+Checking overlaps for volume H917:0 (G4Box) ... OK! 
+Checking overlaps for volume H917:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct H917 parent= relZ=68643.9 globZ=68643.9
+	zmin=67119.1 zmax=70168.7
+BLCMDtubs::Construct BEAMPIPE parent= relZ=66507.8 globZ=66507.8
+	zmin=65707.7 zmax=67307.9 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q918:0 (G4SubtractionSolid) ... Checking overlaps for volume Q918:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q918 parent= relZ=70983.4 globZ=70983.4
+Checking overlaps for volume H918:0 (G4Box) ... OK! 
+Checking overlaps for volume H918:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct H918 parent= relZ=72962.4 globZ=72962.4
+	zmin=71437.7 zmax=74487.2
+BLCMDtubs::Construct BEAMPIPE parent= relZ=70831.9 globZ=70831.9
+	zmin=69909.9 zmax=71753.9 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q919:0 (G4SubtractionSolid) ... Checking overlaps for volume Q919:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q919 parent= relZ=75756.7 globZ=75756.7
+BLCMDgenericquad::Construct Q919 parent= relZ=75945.7 globZ=75945.7
+Checking overlaps for volume Q919:0 (G4SubtractionSolid) ... Checking overlaps for volume Q919:0 (G4Tubs) ... Checking overlaps for volume Q920:0 (G4SubtractionSolid) ... Checking overlaps for volume Q920:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q920 parent= relZ=79934.8 globZ=79934.8
+Checking overlaps for volume Q921:0 (G4SubtractionSolid) ... Checking overlaps for volume Q921:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q921 parent= relZ=84277.8 globZ=84277.8
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q921:0 (G4SubtractionSolid) with its mother volume Q921 (G4Tubs)
+          protrusion at mother local point (-6.11351,-57.0526,-228.62) by 20 um  (max of 78 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+BLCMDgenericquad::Construct Q921 parent= relZ=84466.8 globZ=84466.8
+Checking overlaps for volume Q921:0 (G4SubtractionSolid) ... Checking overlaps for volume Q921:0 (G4Tubs) ... Checking overlaps for volume Q922:0 (G4SubtractionSolid) ... Checking overlaps for volume Q922:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q922 parent= relZ=88684.1 globZ=88684.1
+BLCMDgenericquad::Construct Q922 parent= relZ=88873.1 globZ=88873.1
+Checking overlaps for volume Q922:0 (G4SubtractionSolid) ... Checking overlaps for volume Q922:0 (G4Tubs) ... Checking overlaps for volume Q923:0 (G4SubtractionSolid) ... Checking overlaps for volume Q923:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q923 parent= relZ=93086.4 globZ=93086.4
+Checking overlaps for volume Q924:0 (G4SubtractionSolid) ... Checking overlaps for volume Q924:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q924 parent= relZ=98362.9 globZ=98362.9
+BLGroup::Construct COL924A parent= relZ=99185.4 globZ=0.0 length=1000.0
+	zmin=-500.0 zmax=500.0 width=109.5 Height=100.0
+Checking overlaps for volume COL924A:0 (G4Box) ... OK! 
+	Parent pos=0.0,0.0,0.0 Relative pos=21074.8,0.0,99185.4 Global pos=21074.8,0.0,99185.4
+Checking overlaps for volume rightJawUS:0 (G4Box) ... OK! 
+BLCMDbox::Construct rightJawUS parent= relZ=0.0 globZ=99168.7
+	zmin=98668.7 zmax=99668.7
+Checking overlaps for volume leftJawUS:0 (G4Box) ... OK! 
+BLCMDbox::Construct leftJawUS parent= relZ=0.0 globZ=99202.2
+	zmin=98702.2 zmax=99702.2
+Checking overlaps for volume Q925:0 (G4SubtractionSolid) ... Checking overlaps for volume Q925:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q925 parent= relZ=102765.2 globZ=102765.2
+Checking overlaps for volume Q926:0 (G4SubtractionSolid) ... Checking overlaps for volume Q926:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q926 parent= relZ=105212.8 globZ=105212.8
+Checking overlaps for volume Q927:0 (G4SubtractionSolid) ... Checking overlaps for volume Q927:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q927 parent= relZ=108952.8 globZ=108952.8
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q928:0 (G4SubtractionSolid) with its mother volume Q928 (G4Tubs)
+          protrusion at mother local point (-34.7163,-4.29538,160.04) by 20 um  (max of 109 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+Checking overlaps for volume Q928:0 (G4SubtractionSolid) ... Checking overlaps for volume Q928:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q928 parent= relZ=116132.5 globZ=116132.5
+Checking overlaps for volume Q928:0 (G4SubtractionSolid) ... Checking overlaps for volume Q928:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q928 parent= relZ=116397.0 globZ=116397.0
+Checking overlaps for volume Q929:0 (G4SubtractionSolid) ... Checking overlaps for volume Q929:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q929 parent= relZ=121265.3 globZ=121265.3
+BLCMDtubs::Construct BEAMPIPE parent= relZ=86514.0 globZ=86514.0
+	zmin=71683.2 zmax=101344.8 kill=0
+BLCMDtubs::Construct BEAMPIPE parent= relZ=110526.5 globZ=110526.5
+	zmin=97305.3 zmax=123747.7 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume FATBEAMPIPE:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct FATBEAMPIPE parent= relZ=121847.5 globZ=121847.5
+	zmin=121371.8 zmax=122323.2 kill=0
+Checking overlaps for volume AC929A:0 (G4Box) ... OK! 
+BLCMDgenericbend::Construct AC929A parent= relZ=122610.2 globZ=122610.2
+	zmin=122089.5 zmax=123130.9
+Checking overlaps for volume AC929A:0 (G4SubtractionSolid) ... Checking overlaps for volume AC929B:0 (G4Box) ... Checking overlaps for volume AC929B:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct AC929B parent= relZ=123471.0 globZ=123471.0
+	zmin=122950.3 zmax=123991.7
+Checking overlaps for volume AC929C:0 (G4Box) ... Checking overlaps for volume AC929C:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct AC929C parent= relZ=124331.7 globZ=124331.7
+	zmin=123811.0 zmax=124852.4
+Checking overlaps for volume AC929D:0 (G4Box) ... Checking overlaps for volume AC929D:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct AC929D parent= relZ=125192.5 globZ=125192.5
+	zmin=124671.8 zmax=125713.2
+Checking overlaps for volume AC929E:0 (G4Box) ... Checking overlaps for volume AC929E:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct AC929E parent= relZ=126053.2 globZ=126053.2
+	zmin=125532.5 zmax=126573.9
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with volume already placed !
+          Overlap is detected for volume AC929F:0 (G4Box) with AC929E:0 (G4Box)
+          overlap at local point (7.96629,-6.35336,520.6) by 200 um  (max of 10 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+Checking overlaps for volume AC929F:0 (G4Box) ... Checking overlaps for volume AC929F:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct AC929F parent= relZ=126914.0 globZ=126914.0
+	zmin=126393.3 zmax=127434.7
+Checking overlaps for volume Q930:0 (G4SubtractionSolid) ... Checking overlaps for volume Q930:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q930 parent= relZ=128258.9 globZ=128258.9
+Checking overlaps for volume Q931:0 (G4SubtractionSolid) ... Checking overlaps for volume Q931:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q931 parent= relZ=132371.5 globZ=132371.5
+BLGroup::Construct COL931A parent= relZ=143870.7 globZ=0.0 length=1000.0
+	zmin=-500.0 zmax=500.0 width=108.0 Height=100.0
+Checking overlaps for volume COL931A:0 (G4Box) ... OK! 
+	Parent pos=0.0,0.0,0.0 Relative pos=51506.1,0.0,143870.7 Global pos=51506.1,0.0,143870.7
+Checking overlaps for volume rightJawDS:0 (G4Box) ... OK! 
+BLCMDbox::Construct rightJawDS parent= relZ=0.0 globZ=143854.4
+	zmin=143354.4 zmax=144354.4
+Checking overlaps for volume leftJawDS:0 (G4Box) ... OK! 
+BLCMDbox::Construct leftJawDS parent= relZ=0.0 globZ=143887.0
+	zmin=143387.0 zmax=144387.0
+Checking overlaps for volume Q932:0 (G4SubtractionSolid) ... Checking overlaps for volume Q932:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q932 parent= relZ=145742.0 globZ=145742.0
+Checking overlaps for volume Q933:0 (G4SubtractionSolid) ... Checking overlaps for volume Q933:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q933 parent= relZ=151601.1 globZ=151601.1
+Checking overlaps for volume Q934:0 (G4SubtractionSolid) ... Checking overlaps for volume Q934:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q934 parent= relZ=163082.4 globZ=163082.4
+Checking overlaps for volume Q935:0 (G4SubtractionSolid) ... Checking overlaps for volume Q935:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q935 parent= relZ=165170.4 globZ=165170.4
+Checking overlaps for volume Q935:0 (G4SubtractionSolid) ... Checking overlaps for volume Q935:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q935 parent= relZ=165712.5 globZ=165712.5
+Checking overlaps for volume Q936:0 (G4SubtractionSolid) ... Checking overlaps for volume Q936:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q936 parent= relZ=166774.6 globZ=166774.6
+Checking overlaps for volume FCOL:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct FCOL parent= relZ=172621.1 globZ=172621.1
+	zmin=172121.1 zmax=173121.1 kill=0
+Checking overlaps for volume FCOL:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct FCOL parent= relZ=173517.2 globZ=173517.2
+	zmin=173017.2 zmax=174017.2 kill=0
+Checking overlaps for volume V936:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct V936 parent= relZ=180220.4 globZ=180220.4
+	zmin=179610.8 zmax=180830.0
+Checking overlaps for volume FATBEAMPIPE:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct FATBEAMPIPE parent= relZ=127707.2 globZ=127707.2
+	zmin=127268.2 zmax=128146.1 kill=0
+BLCMDtubs::Construct BEAMPIPE parent= relZ=135763.7 globZ=135763.7
+	zmin=126455.3 zmax=145072.1 kill=0
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with volume already placed !
+          Overlap is detected for volume BEAMPIPE:0 (G4Tubs) with Q932:0 (G4Tubs)
+          overlap at local point (-42.1094,-8.4557,0.102931) by 22.8497 cm  (max of 9 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+BLCMDtubs::Construct BEAMPIPE parent= relZ=158239.4 globZ=158239.4
+	zmin=141355.2 zmax=175123.6 kill=0
+BLCMDtubs::Construct BEAMPIPE parent= relZ=176615.4 globZ=176615.4
+	zmin=172867.0 zmax=180363.7 kill=0
+Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume BEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume Q937:0 (G4SubtractionSolid) ... Checking overlaps for volume Q937:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q937 parent= relZ=181469.0 globZ=181469.0
+Checking overlaps for volume Q938:0 (G4SubtractionSolid) ... Checking overlaps for volume Q938:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q938 parent= relZ=184003.7 globZ=184003.7
+Checking overlaps for volume Q938:0 (G4SubtractionSolid) ... Checking overlaps for volume Q938:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q938 parent= relZ=184369.0 globZ=184369.0
+Checking overlaps for volume Q939:0 (G4SubtractionSolid) ... Checking overlaps for volume Q939:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q939 parent= relZ=188240.8 globZ=188240.8
+BLCMDgenericquad::Construct Q939 parent= relZ=188564.9 globZ=188564.9
+Checking overlaps for volume Q939:0 (G4SubtractionSolid) ... Checking overlaps for volume Q939:0 (G4Tubs) ... Checking overlaps for volume Q940:0 (G4SubtractionSolid) ... Checking overlaps for volume Q940:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q940 parent= relZ=193537.4 globZ=193537.4
+Checking overlaps for volume VT940:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct VT940 parent= relZ=196236.5 globZ=196236.5
+	zmin=195626.9 zmax=196846.1
+Checking overlaps for volume Q941:0 (G4SubtractionSolid) ... Checking overlaps for volume Q941:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q941 parent= relZ=198834.0 globZ=198834.0
+**************************************************************************
+*** G4Exception: GeomVol1002
+***    severity: Warning
+***   issued by: G4PVPlacement::CheckOverlaps()
+*** description: Overlap with mother volume !
+          Overlap is detected for volume Q942:0 (G4SubtractionSolid) with its mother volume Q942 (G4Tubs)
+          protrusion at mother local point (32.8569,-2.34717,-217.52) by 20 um  (max of 130 cases)
+NOTE: Reached maximum fixed number -1- of overlaps reports for this volume !
+***    printing: every 10-th occurrence
+**************************************************************************
+Checking overlaps for volume Q942:0 (G4SubtractionSolid) ... Checking overlaps for volume Q942:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q942 parent= relZ=202705.8 globZ=202705.8
+Checking overlaps for volume VT942:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct VT942 parent= relZ=204350.0 globZ=204350.0
+	zmin=203740.4 zmax=204959.6
+Checking overlaps for volume Q943:0 (G4SubtractionSolid) ... Checking overlaps for volume Q943:0 (G4Tubs) ... OK! 
+BLCMDgenericquad::Construct Q943 parent= relZ=205605.8 globZ=205605.8
+Checking overlaps for volume V943:0 (G4SubtractionSolid) ... OK! 
+BLCMDgenericbend::Construct V943 parent= relZ=206860.2 globZ=206860.2
+	zmin=206250.6 zmax=207469.8
+BLCMDtubs::Construct FATBEAMPIPE parent= relZ=187037.4 globZ=187037.4
+	zmin=179523.9 zmax=194550.8 kill=0
+BLCMDtubs::Construct FATBEAMPIPE parent= relZ=200037.4 globZ=200037.4
+	zmin=192524.0 zmax=207550.8 kill=0
+Checking overlaps for volume FATBEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume FATBEAMPIPE:0 (G4Tubs) ... Checking overlaps for volume PCOL:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct PCOL parent= relZ=209669.8 globZ=209669.8
+	zmin=209169.8 zmax=210169.8 kill=0
+Checking overlaps for volume FATBEAMPIPE:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct FATBEAMPIPE parent= relZ=208764.8 globZ=208764.8
+	zmin=207136.0 zmax=210393.6 kill=0
+Checking overlaps for volume FATBEAMPIPE:0 (G4Tubs) ... OK! 
+BLCMDtubs::Construct FATBEAMPIPE parent= relZ=212391.6 globZ=212391.6
+	zmin=209764.4 zmax=215018.9 kill=0
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+ERROR in cling::CIFactory::createCI(): cannot extract standard library include paths!
+Invoking:
+  LC_ALL=C /Library/Developer/CommandLineTools/usr/bin/c++    -xc++ -E -v /dev/null 2>&1 | sed -n -e '/^.include/,${' -e '/^ \/.*++/p' -e '}'
+Results was:
+With exit code 0
+beam: Root TNtuple ./exttracks_rot_e30_e40_1800000.root:VirtualDetector/tracklist
+
+Geometry test nPoints=100 tolerance=0.002 mm:
+Testing geometry for children of group 'World':
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'BEAMPIPE' intersects genericbend 'V901'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: genericquad 'Q903' intersects genericquad 'Q903'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: genericquad 'Q903' intersects genericquad 'Q903'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: genericquad 'Q904' intersects genericquad 'Q904'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: genericquad 'Q904' intersects genericquad 'Q904'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'BEAMPIPE' intersects genericbend 'V901'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'BEAMPIPE' intersects genericbend 'V906'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: genericbend 'V907' intersects tubs 'BEAMPIPE'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'BEAMPIPE' intersects genericbend 'V906'
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'BEAMPIPE' intersects genericbend 'V907'
+***    printing: every 10-th occurrence
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'BEAMPIPE' intersects genericbend 'H916'
+***    printing: every 10-th occurrence
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: genericquad 'Q922' intersects genericquad 'Q922'
+***    printing: every 10-th occurrence
+**************************************************************************
+**************************************************************************
+*** G4Exception: Geometry Error
+***    severity: Warning
+***   issued by: geometry
+*** description: tubs 'FATBEAMPIPE' intersects genericbend 'V943'
+***    printing: every 10-th occurrence
+**************************************************************************
+Testing geometry for children of group 'TAILCOLLIMATOR':
+Testing geometry for children of group 'USCOLLIMATOR':
+Testing geometry for children of group 'DSCOLLIMATOR':
+Total geometry errors = 40  1 seconds
+
+================== Prepare Visualization ==================
+Stochastic processes are enabled.
+Available UI session types: [ Qt, tcsh, csh ]
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Registered graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRepFile (HepRepFile)
+  RayTracer (RayTracer)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+  OpenGLImmediateQt (OGLIQt, OGLI)
+  OpenGLStoredQt (OGLSQt, OGL, OGLS)
+  Qt3D (Qt3D)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered models:
+  None
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+Registered filters:
+  None
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+
+Selected visualization viewer: Qt
+BLVisManager init: /vis/open OGLSQt
+BLVisManager init: /vis/viewer/set/auxiliaryEdge true
+BLVisManager init: /vis/viewer/set/style surface
+BLVisManager init: /vis/viewer/set/viewpointThetaPhi 0 0 deg
+BLVisManager init: /vis/drawVolume
+BLVisManager init: /tracking/storeTrajectory 1
+BLVisManager init: /vis/scene/add/trajectories
+/tracking/storeTrajectory 1
+Attributes available for modeling and filtering with
+  "/vis/modeling/trajectories/create/drawByAttribute" and
+  "/vis/filtering/trajectories/create/attributeFilter" commands:
+G4TrajectoriesModel:
+  Event ID (EventID): G4int
+  Run ID (RunID): G4int
